@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rpg/shared/style_button.dart';
 import 'package:flutter_rpg/shared/styled_text.dart';
+import 'package:flutter_rpg/screens/home/character_card.dart';
 
 /// The `Home` class is a StatefulWidget that displays a Scaffold with an app bar and a column of styled
 /// text widgets for a character list.
@@ -29,11 +30,7 @@ class _HomeState extends State<Home> {
                   child: ListView.builder(
                     itemCount: characters.length,
                     itemBuilder: (_, index) {
-                      return Container(
-                          color: Colors.grey[800],
-                          padding: const EdgeInsets.all(40),
-                          margin: const EdgeInsets.only(bottom: 40),
-                          child: Text(characters[index]));
+                      return CharacterCard(characters[index]);
                     },
                   ),
                 ),
