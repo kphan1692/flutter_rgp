@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rpg/theme.dart';
 
+/// The `StyleButton` class is a custom button widget in Dart that applies a gradient background and
+/// rounded corners to its child widget.
 class StyleButton extends StatelessWidget {
   const StyleButton({super.key, required this.onPressed, required this.child});
 

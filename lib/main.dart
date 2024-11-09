@@ -6,6 +6,8 @@ void main() {
   runApp(MaterialApp(theme: primaryTheme, home: const Home()));
 }
 
+/// The `Sandbox` class is a stateless widget in Dart that displays a Scaffold with an app bar and body
+/// containing a text widget.
 class Sandbox extends StatelessWidget {
   const Sandbox({super.key});
 
@@ -20,3 +22,5 @@ class Sandbox extends StatelessWidget {
     );
   }
 }
+
+
