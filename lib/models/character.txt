@@ -1,0 +1,106 @@
+Character Model (class)
+
+  -> id (int/string?)
+
+  -> name (string)
+
+  -> slogan (string)
+
+  -> isFav (boolean)
+
+//character.dart
+
+class Character {
+
+//constructor
+Character({
+     required this.name, required this.slogan, required this.id
+})
+//fields
+final String name;
+final String slogan;
+final String id;
+bool _isFav = false;
+
+//getters
+get isFav => _isFav;
+get 
+
+void toggleIsFav(){
+     _isFav = !_isFav;
+}
+}
+
+
+  -> vocation (enhanced enum)
+       -> thumb (string)
+       -> title (string)
+       -> description (string)
+       -> ability (string)
+       -> weapon (string)
+       
+  -> skills (set of type Skill (class))
+       -> name (string)
+       -> thumb (string)
+       -> description (string)
+       -> vocation (Vocation - associated vocation for skill)
+       -> id (int/string?)
+       
+
+  -> stats (mixin)
+       -> health (int)
+       -> attack (int)
+       -> defense (int)
+       -> skill (int)
+       -> points (int)
+
+//Stats.dart
+mixin Stats {
+    int _points = 10;
+     int _health = 10;
+     int _attack = 10;
+     int _defense = 10;
+     int _skill = 10;
+     
+     void increaseStat(String stat) {
+          if(_points > 0) {
+               if (stat == 'health'){
+                    _health++;
+               }
+                 if (stat == 'attach'){
+                    _attack++;
+               }
+                 if (stat == 'defense'){
+                    _defense++;
+               }
+                 if (stat == 'skill'){
+                    _skill++;
+               }
+
+          }
+     }
+
+          void decreaseStat(String stat) {
+     
+               if (stat == 'health' && _health > 5){
+                    _health--;
+                    _point++;
+               }
+                 if (stat == 'attach' && _attack>5){
+                    _attack--;
+                    _point++;
+               }
+                 if (stat == 'defense' && _defense>5){
+                    _defense++;
+                    _point++;
+               }
+                 if (stat == 'skill' && _skill>5){
+                    _skill++;
+                    _point++;
+               }
+
+
+     
+     }
+
+}
